@@ -1,0 +1,48 @@
+.side-navigator {
+  width: 97px;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   padding: 20px 0;
+
+  .brand-logo {
+    margin-top: 39px;
+  }
+
+  .main-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 54px; // Space between the logo and the main nav buttons
+    gap: 25px;
+
+    .icon-with-border {
+      margin-top: -2px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .app-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; // Space between the main nav and the app nav
+    gap: 25px;
+  }
+
+  .feedback-suggestions-button {
+    margin-top: 135px; // Space between app nav and the feedback-suggestions icon
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  button:last-child {
+    margin-bottom: 0;
+  }
+}
