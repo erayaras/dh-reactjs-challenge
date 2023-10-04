@@ -1,7 +1,9 @@
 .app-container {
   display: flex;
+  height: 100vh; /* Make sure it occupies the full viewport height */
 }
 
 .app-content {
-  flex: 1; 
+  flex: 1; /* Allow this content area to expand and take up the available space */
+  overflow-y: auto; /* Add a scrollbar if the content goes beyond the viewport height */
 }
