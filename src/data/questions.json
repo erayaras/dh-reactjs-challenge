@@ -1,0 +1,60 @@
+ [
+      {
+        "id": "q1",
+        "description": "“Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.”",
+        "questionText": "Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Görgüsüzce davranmasaydın, seni böyle dışlamazdık."
+          },
+          {
+            "id": "b",
+            "text": "Ekip arkadaşlarıyla ters düşmeyen, uyumlu bir teknisyendi"
+          },
+          {
+            "id": "c",
+            "text": "Her şeyin kendisinin olmasını isteyen açgözlü biriydi."
+          },
+          {
+            "id": "d",
+            "text": "Bir dediği bir dediğini tutmayan tutarsız bir gazeteciydi."
+          },
+          {
+            "id": "e",
+            "text": "Ağzında bakla ıslanmayan boşboğaz adamın tekiydi o."
+          }
+        ],
+        "correctAnswerId": "b"
+      },
+      {
+        "id": "q2",
+        "description": "This is another description or context for the question.",
+        "questionText": "Which one is not a color?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Blue"
+          },
+          {
+            "id": "b",
+            "text": "Red"
+          },
+          {
+            "id": "c",
+            "text": "Apple"
+          },
+          {
+            "id": "d",
+            "text": "Yellow"
+          },
+          {
+            "id": "e",
+            "text": "Green"
+          }
+        ],
+        "correctAnswerId": "c"
+      }
+    ]
+  
+  

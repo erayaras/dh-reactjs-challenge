@@ -34,12 +34,12 @@ const SideNavigator = () => {
                 ? styles["icon-with-border"]
                 : ""
             }
-            key={button.iconName}
+            key={button.name}
           >
             <NavButton
               key={button.iconName}
               iconName={button.icon}
-              onClick={() => handleNavClick(button.iconName)}
+              onClick={() => handleNavClick(button.name)}
             />
           </div>
         ))}
@@ -48,9 +48,9 @@ const SideNavigator = () => {
       <div className={styles["app-nav-buttons"]}>
         {appNavButtons.map((button) => (
           <NavButton
-            key={button.iconName}
+            key={button.name}
             iconName={button.icon}
-            onClick={() => handleNavClick(button.iconName)}
+            onClick={() => handleNavClick(button.name)}
           />
         ))}
       </div>

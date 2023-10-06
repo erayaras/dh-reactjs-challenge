@@ -1,0 +1,20 @@
+.question-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 111px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #2c3e50;
+
+  & > span {
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+}

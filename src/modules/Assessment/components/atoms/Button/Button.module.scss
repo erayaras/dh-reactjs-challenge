@@ -1,0 +1,46 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+
+  &.tool {
+    background-color: #edf2f4;
+  }
+
+  &.solid {
+    width: 116px;
+    height: 42px;
+    border-radius: 10px;
+    background: #1ca78c;
+
+    color: white;
+    padding: 12px 30px;
+  }
+
+  &.gradient {
+    width: 174px;
+    height: 46px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #1abc9c 0%, #16a085 100%);
+    color: white;
+
+    .icon {
+      margin-right: 6px;
+    }
+  }
+
+  &.hover-button {
+    display: none;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
