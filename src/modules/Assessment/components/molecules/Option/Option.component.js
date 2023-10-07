@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styles from "./Option.module.scss"
 import RadioButton from "../../atoms/RadioButton/RadioButton.component"
-import Button from "../../atoms/Button/Button.component"
+import Button from "../../../../../components/atoms/Button"
 
 const Option = ({
   option,

@@ -1,11 +1,8 @@
 .question-container {
+  display: flex;
+  flex-direction: row;
   background-color: #f9f9f9;
   height: 100%; /* Occupy full height of the parent */
 
-  padding-left: 24px;
-
-  .main {
-    display: flex;
-    flex-direction: row;
-  }
+  padding: 35px 0px 0px 24px;
 }
