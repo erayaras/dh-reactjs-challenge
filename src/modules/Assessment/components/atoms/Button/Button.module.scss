@@ -11,6 +11,11 @@
 
   &.tool {
     background-color: #edf2f4;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &.solid {
@@ -35,12 +40,38 @@
     }
   }
 
-  &.hover-button {
-    display: none;
+  &.navigation {
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    background: #edf2f4;
+
+    color: #2c3e50;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+    }
+
+    .icon-left {
+      margin-right: 8px;
+    }
+
+    .icon-right {
+      margin-left: 8px;
+    }
   }
 
-  .icon {
-    width: 24px;
-    height: 24px;
+  &.hover-button {
+    display: none;
   }
 }

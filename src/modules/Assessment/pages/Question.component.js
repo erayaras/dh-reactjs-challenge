@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from "react"
 import BackNavigation from "../components/molecules/BackNavigation/BackNavigation.component"
 import QuestionDetail from "../components/organisms/QuestionDetail/QuestionDetail.component"
+import QuestionNavigation from "../components/molecules/QuestionNavigation/QuestionNavigation.component"
 import styles from "./Question.module.scss"
 import questionsData from "./../../../data/questions.json"
 
@@ -22,7 +23,10 @@ const Question = () => {
         title="Konu Tarama Testi #1"
         onBackClick={handleBackClick}
       />
+
       {currentQuestion && <QuestionDetail question={currentQuestion} />}
+
+      <QuestionNavigation />
     </div>
   )
 }

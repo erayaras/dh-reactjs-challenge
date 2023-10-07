@@ -7,6 +7,7 @@ const Button = ({
   label,
   theme,
   icon,
+  iconPosition = "left",
   onClick,
   className,
   hoverVisible = false,
@@ -18,19 +19,24 @@ const Button = ({
       }`}
       onClick={onClick}
     >
-      {icon && (
-        <div className={styles["icon"]}>
+      {icon && iconPosition === "left" && (
+        <div className={`${styles["icon"]} ${styles["icon-left"]}`}>
           <Icon name={icon} />
         </div>
       )}
       {label}
+      {icon && iconPosition === "right" && (
+        <div className={`${styles["icon"]} ${styles["icon-right"]}`}>
+          <Icon name={icon} />
+        </div>
+      )}
     </button>
   )
 }
 
 Button.propTypes = {
   label: PropTypes.string,
-  theme: PropTypes.oneOf(["solid", "gradient", "tool"]),
+  theme: PropTypes.oneOf(["solid", "gradient", "tool", "navigation"]),
   icon: PropTypes.string,
   className: PropTypes.string,
   hoverVisible: PropTypes.bool,
