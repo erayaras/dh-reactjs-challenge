@@ -5,25 +5,45 @@ import styles from "./SideNavigator.module.scss"
 
 const SideNavigator = () => {
   const mainNavButtons = [
-    {name: "Homepage", icon: "homepage"},
-    {name: "Lessons", icon: "lessons"},
-    {name: "Question Bank", icon: "question-bank"},
-    {name: "Practice Exams", icon: "practice-exams"},
-    {name: "Guidance Videos", icon: "guidance-videos"},
-    {name: "Statistics", icon: "statistics"},
-    {name: "MeasurementEvaluation", icon: "measurement-evaluation"},
+    {name: "Homepage", icon: "homepage", route: "/"},
+    {name: "Lessons", icon: "lessons", route: "/lessons"},
+    {
+      name: "Question Bank",
+      icon: "question-bank",
+      route: "/question-bank/question",
+    },
+    {name: "Practice Exams", icon: "practice-exams", route: "/practice-exams"},
+    {
+      name: "Guidance Videos",
+      icon: "guidance-videos",
+      route: "/guidance-videos",
+    },
+    {name: "Statistics", icon: "statistics", route: "/statistics"},
+    {
+      name: "MeasurementEvaluation",
+      icon: "measurement-evaluation",
+      route: "/measurement-evaluation",
+    },
   ]
 
   const appNavButtons = [
-    {name: "CozucuApp", icon: "cozucu-app"},
-    {name: "SimdiAnladimApp", icon: "simdi-anladim-app"},
-    {name: "KocumYanimdaApp", icon: "kocum-yanimda-app"},
+    {name: "CozucuApp", icon: "cozucu-app", route: "/cozucu-app"},
+    {
+      name: "SimdiAnladimApp",
+      icon: "simdi-anladim-app",
+      route: "/simdi-anladim-app",
+    },
+    {
+      name: "KocumYanimdaApp",
+      icon: "kocum-yanimda-app",
+      route: "/kocum-yanimda-app",
+    },
   ]
 
   return (
     <div className={styles["side-navigator"]}>
       <div className={styles["brand-logo"]}>
-        <BrandLogo onClick={() => handleNavClick("Homepage")} />
+        <BrandLogo />
       </div>
 
       <div className={styles["main-nav-buttons"]}>
@@ -36,37 +56,22 @@ const SideNavigator = () => {
             }
             key={button.name}
           >
-            <NavButton
-              key={button.iconName}
-              iconName={button.icon}
-              onClick={() => handleNavClick(button.name)}
-            />
+            <NavButton iconName={button.icon} to={button.route} />
           </div>
         ))}
       </div>
 
       <div className={styles["app-nav-buttons"]}>
         {appNavButtons.map((button) => (
-          <NavButton
-            key={button.name}
-            iconName={button.icon}
-            onClick={() => handleNavClick(button.name)}
-          />
+          <NavButton iconName={button.icon} to={button.route} />
         ))}
       </div>
 
       <div className={styles["feedback-suggestions-button"]}>
-        <NavButton
-          iconName="feedback-suggestions"
-          onClick={() => handleNavClick("Feedback & Suggestions")}
-        />
+        <NavButton iconName="feedback-suggestions" to="/feedback-suggestions" />
       </div>
     </div>
   )
-
-  function handleNavClick(name) {
-    console.log(`Navigating to: ${name}`)
-  }
 }
 
 export default SideNavigator

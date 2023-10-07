@@ -1,19 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {Link} from "react-router-dom"
 import Icon from "../../../../../components/atoms/Icon/Icon.component"
 import styles from "./NavButton.module.scss"
 
-const NavButton = ({iconName, onClick}) => {
+const NavButton = ({iconName, to}) => {
   return (
-    <div className={styles["nav-button"]} onClick={onClick}>
+    <Link className={styles["nav-button-link"]} to={to}>
       <Icon name={iconName} />
-    </div>
+    </Link>
   )
 }
 
 NavButton.propTypes = {
   iconName: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  to: PropTypes.string.isRequired, // New prop type for the route path
 }
 
 export default NavButton
