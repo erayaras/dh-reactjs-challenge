@@ -4,13 +4,13 @@ import BubbleHeader from "../../molecules/BubbleHeader/BubbleHeader.component"
 import BubbleRow from "../../molecules/BubbleRow/BubbleRow.component"
 import styles from "./BubbleSheet.module.scss"
 
-const BubbleSheet = ({questions}) => {
+const BubbleSheet = ({lessonName, questions}) => {
   return (
     <div className={styles.bubbleSheet}>
       <BubbleHeader
         iconName="lesson-turkish"
-        label="Türkçe"
-        questionCount="15"
+        label={lessonName}
+        questionCount={questions.length}
       />
       {questions.map((question, index) => (
         <BubbleRow

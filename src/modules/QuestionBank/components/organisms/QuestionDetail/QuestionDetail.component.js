@@ -4,11 +4,13 @@ import styles from "./QuestionDetail.module.scss"
 import OptionsList from "../../molecules/OptionsList/OptionsList.component"
 import QuestionDetailHeader from "../../molecules/QuestionDetailHeader/QuestionDetailHeader.component"
 
-const QuestionDetail = ({question}) => {
+const QuestionDetail = ({lessonName, questionNumber, question}) => {
   return (
     <div className={styles["question-detail-container"]}>
       <div className={styles["header-and-question"]}>
-        <QuestionDetailHeader badgeLabel="Soru: Türkçe #7" />
+        <QuestionDetailHeader
+          badgeLabel={`Soru: ${lessonName} #${questionNumber}`}
+        />
 
         <p className={styles["description"]}>{question?.description}</p>
         <p className={styles["question"]}>{question?.questionText}</p>

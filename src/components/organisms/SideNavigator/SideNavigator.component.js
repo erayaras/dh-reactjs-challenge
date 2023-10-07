@@ -10,7 +10,7 @@ const SideNavigator = () => {
     {
       name: "Question Bank",
       icon: "question-bank",
-      route: "/question-bank/question",
+      route: "/question-bank",
     },
     {name: "Practice Exams", icon: "practice-exams", route: "/practice-exams"},
     {
