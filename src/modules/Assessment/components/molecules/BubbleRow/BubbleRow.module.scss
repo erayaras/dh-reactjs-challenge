@@ -1,0 +1,27 @@
+.bubbleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 324px;
+  height: 60px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  background: rgb(237, 248, 254);
+
+  padding: 10px 10px 10px 15px;
+
+  margin-bottom: 4px;
+
+  .questionLabel {
+    color: #1e2029;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    flex-shrink: 0; // Prevent shrinking
+    min-width: 50px;
+  }
+}

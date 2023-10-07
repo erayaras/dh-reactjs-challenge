@@ -1,0 +1,28 @@
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  fill: #edf9fe;
+  border: 1px solid #4993b1;
+  border-radius: 50%;
+  cursor: pointer;
+
+  color: #4993b1;
+  text-align: center;
+
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  &.selected {
+    background-color: #000;
+    color: #fff;
+  }
+}

@@ -3,4 +3,9 @@
   height: 100%; /* Occupy full height of the parent */
 
   padding-left: 24px;
+
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
 }
