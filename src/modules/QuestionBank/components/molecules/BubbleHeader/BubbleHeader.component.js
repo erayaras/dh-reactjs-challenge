@@ -18,7 +18,7 @@ const BubbleHeader = ({iconName, label, questionCount}) => {
 BubbleHeader.propTypes = {
   iconName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  questionCount: PropTypes.string.isRequired,
+  questionCount: PropTypes.number.isRequired,
 }
 
 export default BubbleHeader
