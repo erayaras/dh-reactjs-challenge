@@ -40,7 +40,7 @@ const Question = () => {
     if (questionNumber > 1) {
       navigate(
         `/question-bank/${lessonName}/${testName}/${testNumber}/${
-          Number(questionNumber) - 1
+          questionNumber - 1
         }`
       )
     }
@@ -50,7 +50,7 @@ const Question = () => {
     if (questionNumber < questionsData.length) {
       navigate(
         `/question-bank/${lessonName}/${testName}/${testNumber}/${
-          Number(questionNumber) + 1
+          questionNumber + 1
         }`
       )
     }

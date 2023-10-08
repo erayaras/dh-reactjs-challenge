@@ -28,7 +28,6 @@ const AppRoutes = () => {
         path="/question-bank/:lessonName/:testName/:testNumber/:questionNumber"
         element={<QuestionBank />}
       />
-
       <Route
         path="/practice-exams/:lessonName/:testName/:testNumber/:questionNumber"
         element={<PracticeExams />}
