@@ -17,7 +17,6 @@ const Question = () => {
   const navigate = useNavigate()
 
   const [currentQuestion, setCurrentQuestion] = useState(null)
-
   const [selectedOptions, setSelectedOptions] = useState({})
 
   const {lessonName, testName} = useParams()

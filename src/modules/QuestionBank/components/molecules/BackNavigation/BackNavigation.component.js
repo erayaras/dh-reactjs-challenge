@@ -8,7 +8,7 @@ const BackNavigation = ({title, onBackClick}) => {
   return (
     <div className={styles.backNavigation}>
       <ArrowButton direction="left" onClick={onBackClick} />
-      <Heading level="2">{title}</Heading>
+      <Heading level="3">{title}</Heading>
     </div>
   )
 }

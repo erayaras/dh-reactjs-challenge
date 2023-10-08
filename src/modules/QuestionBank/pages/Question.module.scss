@@ -4,9 +4,14 @@
   background-color: #f9f9f9;
   height: 100%; /* Occupy full height of the parent */
 
-  padding: 35px 27px 0px 24px;
+  padding: 0px 27px 0px 24px;
 
   .question {
+    flex: 1;
+    width: 100%;
+    max-width: 916px;
+  }
+  .anwser {
     flex: 1;
   }
 }
