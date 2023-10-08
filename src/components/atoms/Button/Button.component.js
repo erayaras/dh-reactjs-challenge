@@ -36,7 +36,13 @@ const Button = ({
 
 Button.propTypes = {
   label: PropTypes.string,
-  theme: PropTypes.oneOf(["solid", "gradient", "tool", "navigation"]),
+  theme: PropTypes.oneOf([
+    "solid",
+    "gradient",
+    "tool",
+    "navigation",
+    "end-test",
+  ]),
   icon: PropTypes.string,
   className: PropTypes.string,
   hoverVisible: PropTypes.bool,
