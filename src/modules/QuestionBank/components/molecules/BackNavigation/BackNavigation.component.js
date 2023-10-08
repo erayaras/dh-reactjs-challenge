@@ -6,7 +6,7 @@ import styles from "./BackNavigation.module.scss"
 
 const BackNavigation = ({title, onBackClick}) => {
   return (
-    <div className={styles["back-navigation"]}>
+    <div className={styles.backNavigation}>
       <ArrowButton direction="left" onClick={onBackClick} />
       <Heading level="2">{title}</Heading>
     </div>

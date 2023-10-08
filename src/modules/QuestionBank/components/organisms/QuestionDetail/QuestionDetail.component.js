@@ -12,14 +12,14 @@ const QuestionDetail = ({
   selectedOption,
 }) => {
   return (
-    <div className={styles["question-detail-container"]}>
-      <div className={styles["header-and-question"]}>
+    <div className={styles.questionDetailContainer}>
+      <div className={styles.headerAndQuestion}>
         <QuestionDetailHeader
           badgeLabel={`Soru: ${lessonName} #${questionNumber}`}
         />
 
-        <p className={styles["description"]}>{question?.description}</p>
-        <p className={styles["question"]}>{question?.questionText}</p>
+        <p className={styles.description}>{question?.description}</p>
+        <p className={styles.question}>{question?.questionText}</p>
       </div>
       <OptionsList
         options={question?.options}

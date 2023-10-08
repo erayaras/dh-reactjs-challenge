@@ -4,7 +4,7 @@ import styles from "./QuestionDetailToolBar.module.scss"
 
 const QuestionDetailToolBar = () => {
   return (
-    <div className={styles["question-detail-toolbar"]}>
+    <div className={styles.questionDetailToolbar}>
       <Button theme={"tool"} icon={"brush"} />
       <Button theme={"tool"} icon={"zoom-in"} />
       <Button theme={"tool"} icon={"zoom-out"} />

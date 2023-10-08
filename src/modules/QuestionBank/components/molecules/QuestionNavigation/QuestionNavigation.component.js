@@ -10,8 +10,8 @@ const QuestionNavigation = ({
   onNextClick,
 }) => {
   return (
-    <div className={styles["question-navigation"]}>
-      <div className={currentQuestionNumber > 1 ? "" : styles["hidden"]}>
+    <div className={styles.questionNavigation}>
+      <div className={currentQuestionNumber > 1 ? "" : styles.hidden}>
         <Button
           label="Önceki Soru"
           theme="navigation"
@@ -21,9 +21,7 @@ const QuestionNavigation = ({
         />
       </div>
       <div
-        className={
-          currentQuestionNumber < totalQuestions ? "" : styles["hidden"]
-        }
+        className={currentQuestionNumber < totalQuestions ? "" : styles.hidden}
       >
         <Button
           label="Sonraki Soru"

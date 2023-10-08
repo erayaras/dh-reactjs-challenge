@@ -37,7 +37,7 @@
   &.correct {
     border-color: #1abc9c;
 
-    .option-content > span {
+    .optionContent > span {
       color: #1abc9c;
       font-size: 16px;
       font-weight: 700;
@@ -45,10 +45,10 @@
     }
   }
 
-  &.highlight-correct {
+  &.highlightCorrect {
     border-color: #1abc9c;
 
-    .option-content > span {
+    .optionContent > span {
       color: #1abc9c;
       color: #1abc9c;
       font-size: 16px;
@@ -58,7 +58,7 @@
   }
 }
 
-.option-content {
+.optionContent {
   display: flex;
   align-items: center;
 

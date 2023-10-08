@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 const QuestionBadge = ({label}) => {
   return (
-    <div className={styles["question-badge"]}>
+    <div className={styles.questionBadge}>
       <span>{label}</span>
     </div>
   )

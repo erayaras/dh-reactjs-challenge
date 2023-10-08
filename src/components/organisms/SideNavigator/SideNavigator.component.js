@@ -44,17 +44,17 @@ const SideNavigator = () => {
   ]
 
   return (
-    <div className={styles["side-navigator"]}>
-      <div className={styles["brand-logo"]}>
+    <div className={styles.sideNavigator}>
+      <div className={styles.brandLogo}>
         <BrandLogo />
       </div>
 
-      <div className={styles["main-nav-buttons"]}>
+      <div className={styles.mainNavButtons}>
         {mainNavButtons.map((button) => (
           <div
             className={
               button.icon === "measurement-evaluation"
-                ? styles["icon-with-border"]
+                ? styles.iconWithBorder
                 : ""
             }
             key={button.name}
@@ -72,7 +72,7 @@ const SideNavigator = () => {
         ))}
       </div>
 
-      <div className={styles["app-nav-buttons"]}>
+      <div className={styles.appNavButtons}>
         {appNavButtons.map((button) => (
           <NavButton
             key={button.name}
@@ -87,7 +87,7 @@ const SideNavigator = () => {
         ))}
       </div>
 
-      <div className={styles["feedback-suggestions-button"]}>
+      <div className={styles.feedbackSuggestionsButton}>
         <NavButton
           iconName="feedback-suggestions"
           to="/feedback-suggestions"

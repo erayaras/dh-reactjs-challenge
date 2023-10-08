@@ -6,7 +6,7 @@ import QuestionDetailToolBar from "../../molecules/QuestionDetailToolBar/Questio
 
 const QuestionDetailHeader = ({badgeLabel}) => {
   return (
-    <div className={styles["question-detail-header"]}>
+    <div className={styles.questionDetailHeader}>
       <QuestionBadge label={badgeLabel} />
       <QuestionDetailToolBar />
     </div>

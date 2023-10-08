@@ -5,7 +5,7 @@ import styles from "./AssessmentActions.module.scss"
 
 const AssessmentActions = () => {
   return (
-    <div className={styles["assessment-actions-container"]}>
+    <div className={styles.assessmentActionsContainer}>
       <AnswerToggle label="Cevapları Göster" />
       <Button
         label="Testi Bitir"

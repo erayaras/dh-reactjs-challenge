@@ -6,8 +6,8 @@ import styles from "./NavButton.module.scss"
 
 const NavButton = ({iconName, to, isActive}) => {
   return (
-    <Link className={styles["nav-button-link"]} to={to}>
-      <div className={styles["icon-wrapper"]}>
+    <Link className={styles.navButtonLink} to={to}>
+      <div className={styles.iconWrapper}>
         {isActive && <Icon name="highlighter" />}
       </div>
       <Icon name={iconName} />

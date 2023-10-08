@@ -21,17 +21,17 @@ const Option = ({
 
   return (
     <div
-      className={`${styles["option"]} ${
+      className={`${styles.option} ${
         isSelected
           ? isCorrect
-            ? styles["correct"]
-            : styles["incorrect"]
+            ? styles.correct
+            : styles.incorrect
           : shouldHighlightCorrect
-          ? styles["highlight-correct"]
+          ? styles.highlightCorrect
           : ""
       }`}
     >
-      <div className={styles["option-content"]}>
+      <div className={styles.optionContent}>
         <RadioButton
           id={option?.id}
           name="questionOption"
@@ -60,7 +60,7 @@ const Option = ({
           hoverVisible
           label="Cevapla"
           theme="solid"
-          className={styles["hover-button"]}
+          className={styles.hoverButton}
           onClick={() => onOptionSelect(option?.id)}
         />
       )}

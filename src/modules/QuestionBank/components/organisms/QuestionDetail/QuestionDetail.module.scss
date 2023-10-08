@@ -1,4 +1,4 @@
-.question-detail-container {
+.questionDetailContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +12,7 @@
   /* shadow */
   box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.04);
 
-  .header-and-question {
+  .headerAndQuestion {
     .description {
       color: #2c3e50;
 

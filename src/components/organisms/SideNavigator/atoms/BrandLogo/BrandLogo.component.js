@@ -4,7 +4,7 @@ import styles from "./BrandLogo.module.scss"
 
 const BrandLogo = () => {
   return (
-    <div className={styles["brand-logo"]}>
+    <div className={styles.brandLogo}>
       <img src={Logo} alt="Doping Hafıza" />
     </div>
   )

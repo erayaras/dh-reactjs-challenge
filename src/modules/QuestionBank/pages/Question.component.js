@@ -57,8 +57,8 @@ const Question = () => {
   }
 
   return (
-    <div className={styles["question-container"]}>
-      <div className={styles["question"]}>
+    <div className={styles.questionContainer}>
+      <div className={styles.question}>
         <BackNavigation
           title={`${displayTestName} Testi #${testNumber}`}
           onBackClick={handleBackClick}
@@ -84,7 +84,7 @@ const Question = () => {
         />
       </div>
 
-      <div className={styles["answer"]}>
+      <div className={styles.answer}>
         <AssessmentActions />
         <BubbleSheet
           lessonName={displayLessonName}

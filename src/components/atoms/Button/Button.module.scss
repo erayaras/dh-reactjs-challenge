@@ -7,7 +7,6 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s, opacity 0.3s;
-
   font-family: "Manrope";
 
   &.tool {
@@ -24,7 +23,6 @@
     height: 42px;
     border-radius: 10px;
     background: #1ca78c;
-
     color: white;
     padding: 12px 30px;
   }
@@ -46,7 +44,6 @@
     height: 50px;
     border-radius: 10px;
     background: #edf2f4;
-
     color: #2c3e50;
     text-align: center;
     font-size: 14px;
@@ -62,24 +59,22 @@
       height: 18px;
     }
 
-    .icon-left {
+    .iconLeft {
       margin-right: 8px;
     }
 
-    .icon-right {
+    .iconRight {
       margin-left: 8px;
     }
   }
 
-  &.end-test {
+  &.endTest {
     width: 134px;
     height: 50px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #f7d54c;
-
     color: #2c3e50;
-
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -91,12 +86,11 @@
       justify-content: center;
       width: 36px;
       height: 36px;
-
       margin-right: 12px;
     }
   }
 
-  &.hover-button {
+  &.hoverButton {
     display: none;
   }
 }

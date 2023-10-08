@@ -5,10 +5,7 @@ import Icon from "../../../../../components/atoms/Icon/Icon.component"
 
 const ArrowButton = ({direction, onClick}) => {
   return (
-    <div
-      className={`${styles.arrowButton} ${styles[direction]}`}
-      onClick={onClick}
-    >
+    <div className={`${styles.arrowButton}`} onClick={onClick}>
       <Icon name={`arrow-${direction}`} />
     </div>
   )

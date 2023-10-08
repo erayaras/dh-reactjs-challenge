@@ -14,19 +14,19 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${styles["button"]} ${styles[theme]} ${className} ${
-        hoverVisible ? styles["hover-button"] : ""
+      className={`${styles.button} ${styles[theme]} ${className} ${
+        hoverVisible ? styles.hoverButton : ""
       }`}
       onClick={onClick}
     >
       {icon && iconPosition === "left" && (
-        <div className={`${styles["icon"]} ${styles["icon-left"]}`}>
+        <div className={`${styles.icon} ${styles.iconLeft}`}>
           <Icon name={icon} />
         </div>
       )}
       {label}
       {icon && iconPosition === "right" && (
-        <div className={`${styles["icon"]} ${styles["icon-right"]}`}>
+        <div className={`${styles.icon} ${styles.iconRight}`}>
           <Icon name={icon} />
         </div>
       )}
@@ -41,7 +41,7 @@ Button.propTypes = {
     "gradient",
     "tool",
     "navigation",
-    "end-test",
+    "endTest",
   ]),
   icon: PropTypes.string,
   className: PropTypes.string,

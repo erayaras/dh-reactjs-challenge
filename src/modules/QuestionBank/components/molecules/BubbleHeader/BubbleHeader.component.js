@@ -5,11 +5,11 @@ import styles from "./BubbleHeader.module.scss"
 
 const BubbleHeader = ({iconName, label, questionCount}) => {
   return (
-    <div className={styles["bubble-header"]}>
+    <div className={styles.bubbleHeader}>
       <Icon name={iconName} />
-      <div className={styles["lesson"]}>
-        <span className={styles["label"]}>{label}</span>
-        <span className={styles["question-count"]}>{questionCount} soru</span>
+      <div className={styles.lesson}>
+        <span className={styles.label}>{label}</span>
+        <span className={styles.questionCount}>{questionCount} soru</span>
       </div>
     </div>
   )

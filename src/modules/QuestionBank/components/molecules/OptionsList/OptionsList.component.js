@@ -10,7 +10,7 @@ const OptionsList = ({
   selectedOption,
 }) => {
   return (
-    <div className={styles["options-list"]}>
+    <div className={styles.optionsList}>
       {options?.map((option) => (
         <Option
           key={option.id}
