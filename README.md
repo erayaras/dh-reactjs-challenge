@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+## Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed as part of a coding challenge for the Senior Frontend Developer position at Doping Technology. The main objective was to create an application that showcases my expertise in React and frontend development techniques.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The application is designed as a question bank system that allows users to navigate through various questions, view their details, and interact with different UI components. The main components include:
 
-### `npm start`
+- A side navigator for routing.
+- A dynamic question display.
+- A bubble sheet for visualizing selected options.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Design Decisions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Modules-Based Architecture:** To ensure a clean, organized, and scalable codebase, a modules-based architecture was implemented.
+2. **Atomic Design Approach:** The atomic design methodology was adopted to decompose the UI into smaller, reusable components. This modular strategy facilitates better code organization, reusability, and maintainability.
+3. **Semantic URL Construction:** Adopted a hierarchical and descriptive URL structure to represent the relationship and content of the pages. The URL structure was designed to be intuitive and easily understandable by both users and search engines. By constructing URLs like `/question-bank/{lessonName}/{testName}/{testNumber}/{questionNumber}`, it provides a clear indication of the content hierarchy and the current location within the application. This not only aids in navigation but also potentially offers SEO benefits due to its descriptive nature.
+4. **Asset Organization:** Assets were stored within the `src` folder instead of the public folder. This organization ensures that assets undergo the build process, benefitting from optimizations like minification. It also ensures the inclusion of only necessary assets in the final build.
+5. **Rendering Local Content:** React's `dangerouslySetInnerHTML` was employed to render content containing formatted HTML. The content originates from a trusted local JSON file, ensuring there's no risk of malicious content or cross-site scripting (XSS) attacks.
+6. **SCSS Modules:** SCSS was used in combination with CSS Modules to allow for more organized, maintainable, and scoped styles. This approach helps in avoiding global scope pollution and makes it easier to manage styles as the application grows.
+7. **Performance First:** The application was designed with performance in mind. Using `forwardRef` and `useRef` for automatic scrolling ensures that the DOM isn't queried repeatedly, preserving performance.
 
-### `npm test`
+## Implementation Challenges & Solutions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Interactive Feedback on Option Selection:**
+  - **Challenge:** When a user selects an option, the application must provide immediate feedback. If the chosen option is correct, the styling of the other options should change and a specific button should appear. Conversely, if the chosen option is incorrect, the styling of the other options should adjust differently, and another distinct button should emerge.
+  - **Solution:** Leveraged conditional rendering and state management to dynamically adjust the UI based on the user's selection. By comparing the user's choice against the correct answer in real-time, the application can modify component styles and display appropriate buttons to provide instantaneous feedback. This approach enhances user engagement and provides a more interactive learning experience.
 
-### `npm run build`
+## Additional Implementation Challenges & Solutions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Navigation Button Uniformity:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - **Challenge:** The Figma design allowed the export of standalone icons for some side navigator buttons, while for others, the entire button (including the background) was exportable. This posed a challenge in maintaining a consistent look across all buttons.
+  - **Solution:** The approach to use entire button assets for all navigation buttons was adopted. This guaranteed uniformity throughout the navigation panel and circumvented any visual inconsistencies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **SVG Icon Alignment:**
 
-### `npm run eject`
+  - **Challenge:** Certain icons in the Figma design had extra padding, which wasn't visually evident, leading to misalignment within the SideNavigator.
+  - **Solution:** Adobe Illustrator was employed to optimize these SVG icons by adjusting and removing the unwanted padding around them, ensuring their proper alignment.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Opacity and Background Color Rendering:**
+  - **Challenge:** Figma designs incorporated separate values for opacity and background color for certain sections. When implemented in CSS, using both opacity and background color caused some elements to appear faint or even disappear due to the combined effects of opacity.
+  - **Solution:** Instead of using separate opacity and hex color values, the colors were converted to RGB and combined with the opacity, resulting in RGBA values. This method ensured a consistent visual representation of the color as intended in the Figma design while preventing any unintentional fading or disappearance of elements.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo & Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Live Demo:** [Click here to view the live demo.](#)  
+**Video Walkthrough:** [Watch the application in action here.](#)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Screenshots
 
-## Learn More
+Here are some screenshots showcasing the application's main features:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot 1 Description](path_to_screenshot1.png)  
+_Description or caption for Screenshot 1_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Screenshot 2 Description](path_to_screenshot2.png)  
+_Description or caption for Screenshot 2_
 
-### Code Splitting
+## Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Prerequisites:**
+   - Ensure you have `Node.js` and `npm` (or `yarn`) installed.
+2. **Steps:**
+   1. Clone the repository: `git clone https://github.com/erayaras/dh-reactjs-challenge.git`.
+   2. Navigate to the project folder: `cd [project_folder]`.
+   3. Install the dependencies: `npm install` or `yarn`.
+   4. Start the application: `npm start` or `yarn start`.
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. On launching the application, you'll be presented with a list of questions.
+2. You can navigate between questions using the provided navigation buttons.
+3. Selecting an option on the question will highlight it on the bubble sheet.
 
-### Making a Progressive Web App
+## Technical Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Dynamic Routing:** Utilized `react-router-dom` to handle dynamic routing based on the selected question.
+- **State Management:** Local state management was handled using React hooks, primarily `useState` and `useEffect`.
+- **Performance Optimization:** Used React's `forwardRef` and `useRef` to handle automatic scrolling, ensuring a seamless user experience.
+- **Error Boundaries:** Implemented error boundaries within the application to gracefully handle potential runtime errors. This ensures that if a component encounters an error, it won't crash the entire application. Instead, it provides the opportunity to display a friendly error message to users and log the error for further diagnosis.
 
-### Advanced Configuration
+## Testing Approach
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Manual testing was primarily conducted to ensure that all components rendered correctly and the state was managed effectively.
+- For future implementations, considering integrating Jest and React Testing Library to write unit and integration tests.
 
-### Deployment
+## Feedback & Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+While the challenge provided a great opportunity to showcase various frontend techniques, there are a few areas where improvements can be made:
 
-### `npm run build` fails to minify
+- **Responsiveness:** Enhance the design to be fully responsive, ensuring an optimal user experience across a variety of devices, from desktops to tablets and mobile phones.
+- **Accessibility:** Further improvements could be made to ensure the application is fully accessible to all users, including those with disabilities. This includes better focus management, improved keyboard navigation, and screen reader compatibility.
+- **Animation & Transitions:** Introduce subtle animations or transitions to make the user interface more interactive and engaging. For example, smooth transitions when navigating between questions or a subtle animation when selecting an option can enhance user feedback.
+- **Optimization:** Look into further optimizing the application for performance, especially when handling a larger set of questions or data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+
+This project was an exciting opportunity to apply and showcase various frontend development techniques. I believe it meets the requirements of the challenge and demonstrates a solid understanding of React and frontend best practices. I'm eager to receive feedback and further discuss my approach during the review.
