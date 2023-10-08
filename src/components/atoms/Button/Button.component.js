@@ -14,9 +14,9 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${styles.button} ${styles[theme]} ${className} ${
-        hoverVisible ? styles.hoverButton : ""
-      }`}
+      className={`${styles.button} ${styles[theme]} ${
+        styles[iconPosition]
+      } ${className} ${hoverVisible ? styles.hoverButton : ""}`}
       onClick={onClick}
     >
       {icon && iconPosition === "left" && (

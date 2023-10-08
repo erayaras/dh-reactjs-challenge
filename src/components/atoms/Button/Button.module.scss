@@ -1,7 +1,6 @@
 .button {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 13px;
   border: none;
   border-radius: 10px;
@@ -50,6 +49,8 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    padding: 0px;
+    padding-left: 18px;
 
     .icon {
       display: flex;
@@ -59,8 +60,16 @@
       height: 18px;
     }
 
+    &.left {
+      padding-left: 10px;
+    }
+
     .iconLeft {
       margin-right: 8px;
+    }
+
+    &.right {
+      padding-left: 18px;
     }
 
     .iconRight {
@@ -79,6 +88,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
+    padding: 7px;
 
     .icon {
       display: flex;
@@ -86,6 +96,7 @@
       justify-content: center;
       width: 36px;
       height: 36px;
+
       margin-right: 12px;
     }
   }
