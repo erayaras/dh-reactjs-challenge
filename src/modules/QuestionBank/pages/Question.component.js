@@ -77,6 +77,8 @@ const Question = () => {
         )}
 
         <QuestionNavigation
+          currentQuestionNumber={questionNumber}
+          totalQuestions={questionsData.length}
           onPrevClick={handlePrevClick}
           onNextClick={handleNextClick}
         />
