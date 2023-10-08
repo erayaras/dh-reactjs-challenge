@@ -4,7 +4,7 @@ import styles from "./AnswerToggle.module.scss"
 import Switch from "../../../../../components/atoms/Switch/Switch.component"
 
 const AnswerToggle = ({label}) => {
-  const [isOn, setIsOn] = useState(false)
+  const [isOn, setIsOn] = useState(true)
 
   const handleToggle = () => {
     setIsOn(!isOn)
