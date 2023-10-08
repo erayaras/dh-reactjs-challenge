@@ -1,15 +1,14 @@
-import React, {useState} from "react"
 import PropTypes from "prop-types"
+import React from "react"
 import Option from "../Option/Option.component"
 import styles from "./OptionsList.module.scss"
 
-const OptionsList = ({options, correctAnswerId}) => {
-  const [selectedOption, setSelectedOption] = useState(null)
-
-  const handleOptionSelect = (optionId) => {
-    setSelectedOption(optionId)
-  }
-
+const OptionsList = ({
+  options,
+  correctAnswerId,
+  onOptionSelect,
+  selectedOption,
+}) => {
   return (
     <div className={styles["options-list"]}>
       {options?.map((option) => (
@@ -18,7 +17,7 @@ const OptionsList = ({options, correctAnswerId}) => {
           option={option}
           selectedOption={selectedOption}
           isSelected={selectedOption === option.id}
-          onOptionSelect={() => handleOptionSelect(option.id)}
+          onOptionSelect={() => onOptionSelect(option.id)}
           correctAnswerId={correctAnswerId}
         />
       ))}

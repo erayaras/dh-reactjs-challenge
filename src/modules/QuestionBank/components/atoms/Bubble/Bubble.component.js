@@ -2,12 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import styles from "./Bubble.module.scss"
 
-const Bubble = ({isSelected, onClick, label}) => {
+const Bubble = ({isSelected, label}) => {
   return (
-    <div
-      className={`${styles.bubble} ${isSelected ? styles.selected : ""}`}
-      onClick={onClick}
-    >
+    <div className={`${styles.bubble} ${isSelected ? styles.selected : ""}`}>
       {label.toUpperCase()}
     </div>
   )
@@ -15,7 +12,7 @@ const Bubble = ({isSelected, onClick, label}) => {
 
 Bubble.propTypes = {
   isSelected: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+
   label: PropTypes.string.isRequired,
 }
 

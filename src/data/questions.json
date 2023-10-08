@@ -1,6 +1,6 @@
 [
     {
-        "id": "q1",
+        "id": 1,
         "description": "“Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.”",
         "questionText": "Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?",
         "options": [
@@ -28,7 +28,7 @@
         "correctAnswerId": "b"
     },
     {
-        "id": "q2",
+        "id": 2,
         "description": "“Dil, bir milletin kimliğidir ve onu korumak, geleceğe taşımaktır.”",
         "questionText": "Yazar bu cümlede neyi ifade etmek istiyor?",
         "options": [
@@ -56,7 +56,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q3",
+        "id": 3,
         "description": "“Bir dil öğrenmek, yeni bir dünya keşfetmektir.”",
         "questionText": "Bu cümlede geçen kelimenin kökeni nedir?",
         "options": [
@@ -81,10 +81,10 @@
                 "text": "Kelimelerin evrimi"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "e"
     },
     {
-        "id": "q4",
+        "id": 4,
         "description": "“Dil, insanın düşüncelerini ifade etme aracıdır.”",
         "questionText": "Bu cümlede geçen kelimenin kökeni nedir?",
         "options": [
@@ -112,7 +112,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q5",
+        "id": 5,
         "description": "“Atasözleri, bir milletin geçmişteki deneyimlerini yansıtır.”",
         "questionText": "Bu parçada anlatılan ana fikir nedir?",
         "options": [
@@ -137,10 +137,10 @@
                 "text": "Dilin fonetik özellikleri"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "b"
     },
     {
-        "id": "q6",
+        "id": 6,
         "description": "“Bir kelimenin anlamını bilmek, onun gücünü kullanmaktır.”",
         "questionText": "Yazar bu metinde hangi dil özelliğinden bahsetmektedir?",
         "options": [
@@ -165,10 +165,10 @@
                 "text": "Kelimelerin evrimi"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "c"
     },
     {
-        "id": "q7",
+        "id": 7,
         "description": "“Dilin güzelliği, onunla ifade edilen duygulardadır.”",
         "questionText": "Yazarın bu parçada kullandığı dil aracı nedir?",
         "options": [
@@ -196,7 +196,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q8",
+        "id": 8,
         "description": "“Dil, kültürle birlikte evrimleşir.”",
         "questionText": "Bu parçada hangi dil konsepti işlenmiştir?",
         "options": [
@@ -221,10 +221,10 @@
                 "text": "Dilin zenginliği"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "d"
     },
     {
-        "id": "q9",
+        "id": 9,
         "description": "“Bir kelimenin anlamını bilmek, onun gücünü kullanmaktır.”",
         "questionText": "Bu parçada hangi dil konsepti işlenmiştir?",
         "options": [
@@ -252,7 +252,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q10",
+        "id": 10,
         "description": "“Bir kelimenin anlamını bilmek, onun gücünü kullanmaktır.”",
         "questionText": "Bu cümlede geçen kelime ne anlama gelmektedir?",
         "options": [
@@ -277,10 +277,10 @@
                 "text": "Anlamın gücü"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "e"
     },
     {
-        "id": "q11",
+        "id": 11,
         "description": "“Türkçede, bazı kelimelerin birden fazla anlamı vardır.”",
         "questionText": "Bu parçada anlatılan ana fikir nedir?",
         "options": [
@@ -308,7 +308,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q12",
+        "id": 12,
         "description": "“Dil, kültürle birlikte evrimleşir.”",
         "questionText": "Bu cümlede geçen kelime ne anlama gelmektedir?",
         "options": [
@@ -333,10 +333,10 @@
                 "text": "Dilin fonetik özellikleri"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "b"
     },
     {
-        "id": "q13",
+        "id": 13,
         "description": "“Atasözleri, bir milletin geçmişteki deneyimlerini yansıtır.”",
         "questionText": "Bu parçada hangi dil kavramı işlenmiştir?",
         "options": [
@@ -364,7 +364,7 @@
         "correctAnswerId": "a"
     },
     {
-        "id": "q14",
+        "id": 14,
         "description": "“Dil, kültürle birlikte evrimleşir.”",
         "questionText": "Yazar bu cümlede neyi ifade etmek istiyor?",
         "options": [
@@ -389,10 +389,10 @@
                 "text": "Anlamın gücü"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "c"
     },
     {
-        "id": "q15",
+        "id": 15,
         "description": "“Dil, kültürle birlikte evrimleşir.”",
         "questionText": "Bu metinde hangi dil özelliği vurgulanmıştır?",
         "options": [
@@ -417,6 +417,6 @@
                 "text": "Dilin fonetik özellikleri"
             }
         ],
-        "correctAnswerId": "a"
+        "correctAnswerId": "d"
     }
 ]

@@ -10,7 +10,6 @@
   fill: #edf9fe;
   border: 1px solid #4993b1;
   border-radius: 50%;
-  cursor: pointer;
 
   color: #4993b1;
   text-align: center;
@@ -22,7 +21,7 @@
   line-height: 24px;
 
   &.selected {
-    background-color: #000;
+    background-color: #03a9f1;
     color: #fff;
   }
 }

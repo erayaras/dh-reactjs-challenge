@@ -18,7 +18,8 @@ const Question = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(null)
 
-  const {lessonName, testName, testNumber} = useParams()
+  const {lessonName, testName} = useParams()
+  const testNumber = Number(useParams().testNumber)
   const questionNumber = Number(useParams().questionNumber)
   const displayLessonName = getDisplayLessonName(lessonName)
   const displayTestName = getDisplayTestName(testName)
@@ -49,6 +50,15 @@ const Question = () => {
     }
   }
 
+  const [selectedOptions, setSelectedOptions] = useState({})
+
+  const handleOptionSelect = (questionNumber, optionId) => {
+    setSelectedOptions((prev) => ({...prev, [questionNumber]: optionId}))
+  }
+  useEffect(() => {
+    console.log("selectedOptions", selectedOptions)
+  }, [selectedOptions])
+
   return (
     <div className={styles["question-container"]}>
       <div className={styles["question"]}>
@@ -62,6 +72,10 @@ const Question = () => {
             lessonName={displayLessonName}
             questionNumber={questionNumber}
             question={currentQuestion}
+            onOptionSelect={(optionId) =>
+              handleOptionSelect(questionNumber, optionId)
+            }
+            selectedOption={selectedOptions[questionNumber]}
           />
         )}
 
@@ -73,7 +87,12 @@ const Question = () => {
 
       <div className={styles["answer"]}>
         <AssessmentActions />
-        <BubbleSheet lessonName={displayLessonName} questions={questionsData} />
+        <BubbleSheet
+          lessonName={displayLessonName}
+          questions={questionsData}
+          selectedOptions={selectedOptions}
+          setSelectedOptions={setSelectedOptions}
+        />
       </div>
     </div>
   )

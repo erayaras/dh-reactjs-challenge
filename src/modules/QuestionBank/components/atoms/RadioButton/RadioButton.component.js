@@ -21,7 +21,7 @@ const RadioButton = ({
 
   return (
     <div className={styleClass}>
-      <input type="radio" id={id} name={name} checked={isSelected} />
+      <input type="radio" id={id} name={name} checked={isSelected} readOnly />
     </div>
   )
 }

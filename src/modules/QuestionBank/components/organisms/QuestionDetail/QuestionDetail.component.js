@@ -4,7 +4,13 @@ import styles from "./QuestionDetail.module.scss"
 import OptionsList from "../../molecules/OptionsList/OptionsList.component"
 import QuestionDetailHeader from "../../molecules/QuestionDetailHeader/QuestionDetailHeader.component"
 
-const QuestionDetail = ({lessonName, questionNumber, question}) => {
+const QuestionDetail = ({
+  lessonName,
+  questionNumber,
+  question,
+  onOptionSelect,
+  selectedOption,
+}) => {
   return (
     <div className={styles["question-detail-container"]}>
       <div className={styles["header-and-question"]}>
@@ -18,6 +24,8 @@ const QuestionDetail = ({lessonName, questionNumber, question}) => {
       <OptionsList
         options={question?.options}
         correctAnswerId={question?.correctAnswerId}
+        onOptionSelect={onOptionSelect}
+        selectedOption={selectedOption}
       />
     </div>
   )

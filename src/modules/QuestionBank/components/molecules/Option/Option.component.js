@@ -12,7 +12,8 @@ const Option = ({
   correctAnswerId,
 }) => {
   const isCorrect = option.id === correctAnswerId
-  const shouldHighlightCorrect = selectedOption !== null && isCorrect
+  const shouldHighlightCorrect =
+    selectedOption && selectedOption !== correctAnswerId && isCorrect
 
   const handleNavigateSolutionVideoClick = (e) => {
     e.stopPropagation() // Prevent triggering the option's onClick
