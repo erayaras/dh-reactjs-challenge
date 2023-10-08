@@ -12,6 +12,7 @@ const BubbleRow = ({
   const isCurrentQuestion = questionNumber === currentQuestionNumber
   return (
     <div
+      data-id={`question-${questionNumber}`}
       className={`${styles.bubbleRow} ${
         isCurrentQuestion ? styles.current : ""
       }`}

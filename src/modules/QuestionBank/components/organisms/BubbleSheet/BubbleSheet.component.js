@@ -1,5 +1,6 @@
+// @ts-nocheck
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useEffect, useRef} from "react"
 import BubbleHeader from "../../molecules/BubbleHeader/BubbleHeader.component"
 import BubbleRow from "../../molecules/BubbleRow/BubbleRow.component"
 import styles from "./BubbleSheet.module.scss"
@@ -10,8 +11,28 @@ const BubbleSheet = ({
   selectedOptions,
   currentQuestionNumber,
 }) => {
+  const sheetRef = useRef(null)
+
+  // This effect runs whenever the currentQuestionNumber changes
+  useEffect(() => {
+    // Check if the ref is attached to the DOM element
+    if (sheetRef.current) {
+      // Find the current question element using the `data-id` attribute
+      const currentQuestionElement = sheetRef.current.querySelector(
+        `[data-id="question-${currentQuestionNumber}"]`
+      )
+      // If found, scroll the question into view smoothly
+      if (currentQuestionElement) {
+        currentQuestionElement.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        })
+      }
+    }
+  }, [currentQuestionNumber])
+
   return (
-    <div className={styles.bubbleSheet}>
+    <div className={styles.bubbleSheet} ref={sheetRef}>
       <BubbleHeader
         iconName="lesson-turkish"
         label={lessonName}
