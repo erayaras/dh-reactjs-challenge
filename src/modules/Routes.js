@@ -1,5 +1,5 @@
 import React from "react"
-import {Route, Routes} from "react-router-dom"
+import {Route, Routes, Navigate} from "react-router-dom"
 
 import Homepage from "./QuestionBank/pages/Question.component"
 import Lessons from "./QuestionBank/pages/Question.component"
@@ -16,6 +16,13 @@ import FeedbackSuggestions from "./QuestionBank/pages/Question.component"
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route
+        path="/"
+        element={
+          <Navigate to="/question-bank/turkce/konu-tarama/1/1" replace />
+        }
+      />
+
       <Route
         path="/home/:lessonName/:testName/:testNumber/:questionNumber"
         element={<Homepage />}
