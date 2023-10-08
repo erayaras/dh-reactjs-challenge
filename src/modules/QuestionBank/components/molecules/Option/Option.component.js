@@ -39,8 +39,10 @@ const Option = ({
           isCorrect={isCorrect}
           shouldHighlightCorrect={shouldHighlightCorrect}
         />
+
         <span>
-          {option?.id?.toUpperCase()})&nbsp;&nbsp;{option?.text}
+          {option?.id?.toUpperCase()})&nbsp;&nbsp;
+          <span dangerouslySetInnerHTML={{__html: option?.text || ""}} />
         </span>
       </div>
 

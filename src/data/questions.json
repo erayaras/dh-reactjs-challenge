@@ -6,23 +6,23 @@
         "options": [
             {
                 "id": "a",
-                "text": "Görgüsüzce davranmasaydın, seni böyle dışlamazdık."
+                "text": "<u><b>Görgüsüzce</b></u> davranmasaydın, seni böyle dışlamazdık."
             },
             {
                 "id": "b",
-                "text": "Ekip arkadaşlarıyla ters düşmeyen, uyumlu bir teknisyendi"
+                "text": "Ekip arkadaşlarıyla ters düşmeyen, <u><b>uyumlu</b></u> bir teknisyendi"
             },
             {
                 "id": "c",
-                "text": "Her şeyin kendisinin olmasını isteyen açgözlü biriydi."
+                "text": "Her şeyin kendisinin olmasını isteyen <u><b>açgözlü</b></u> biriydi."
             },
             {
                 "id": "d",
-                "text": "Bir dediği bir dediğini tutmayan tutarsız bir gazeteciydi."
+                "text": "Bir dediği bir dediğini tutmayan <u><b>tutarsız</b></u> bir gazeteciydi."
             },
             {
                 "id": "e",
-                "text": "Ağzında bakla ıslanmayan boşboğaz adamın tekiydi o."
+                "text": "Ağzında bakla ıslanmayan <u><b>boşboğaz</b></u> adamın tekiydi o."
             }
         ],
         "correctAnswerId": "b"
