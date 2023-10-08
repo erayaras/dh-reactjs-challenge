@@ -22,7 +22,12 @@
     height: 42px;
     border-radius: 10px;
     background: #1ca78c;
-    color: white;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
     padding: 12px 30px;
   }
 
@@ -31,9 +36,16 @@
     height: 46px;
     border-radius: 6px;
     background: linear-gradient(180deg, #1abc9c 0%, #16a085 100%);
-    color: white;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0px;
+    padding-left: 12px;
 
     .icon {
+      display: flex;
       margin-right: 6px;
     }
   }
