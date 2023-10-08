@@ -75,6 +75,7 @@ const SideNavigator = () => {
       <div className={styles["app-nav-buttons"]}>
         {appNavButtons.map((button) => (
           <NavButton
+            key={button.name}
             iconName={button.icon}
             to={button.route}
             isActive={
