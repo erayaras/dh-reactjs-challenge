@@ -4,7 +4,12 @@ import BubbleHeader from "../../molecules/BubbleHeader/BubbleHeader.component"
 import BubbleRow from "../../molecules/BubbleRow/BubbleRow.component"
 import styles from "./BubbleSheet.module.scss"
 
-const BubbleSheet = ({lessonName, questions, selectedOptions}) => {
+const BubbleSheet = ({
+  lessonName,
+  questions,
+  selectedOptions,
+  currentQuestionNumber,
+}) => {
   return (
     <div className={styles.bubbleSheet}>
       <BubbleHeader
@@ -18,6 +23,7 @@ const BubbleSheet = ({lessonName, questions, selectedOptions}) => {
           questionNumber={index + 1}
           options={question.options}
           selectedOption={selectedOptions[question.id]}
+          currentQuestionNumber={currentQuestionNumber}
         />
       ))}
     </div>

@@ -3,9 +3,19 @@ import React from "react"
 import Bubble from "../../atoms/Bubble/Bubble.component"
 import styles from "./BubbleRow.module.scss"
 
-const BubbleRow = ({questionNumber, options, selectedOption}) => {
+const BubbleRow = ({
+  questionNumber,
+  options,
+  selectedOption,
+  currentQuestionNumber,
+}) => {
+  const isCurrentQuestion = questionNumber === currentQuestionNumber
   return (
-    <div className={styles.bubbleRow}>
+    <div
+      className={`${styles.bubbleRow} ${
+        isCurrentQuestion ? styles.current : ""
+      }`}
+    >
       <span className={styles.questionLabel}>{questionNumber}.soru</span>
       {options.map((option) => (
         <Bubble
@@ -22,6 +32,7 @@ BubbleRow.propTypes = {
   questionNumber: PropTypes.number.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectedOption: PropTypes.string,
+  currentQuestionNumber: PropTypes.number.isRequired,
 }
 
 export default BubbleRow

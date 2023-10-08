@@ -18,6 +18,8 @@ const Question = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(null)
 
+  const [selectedOptions, setSelectedOptions] = useState({})
+
   const {lessonName, testName} = useParams()
   const testNumber = Number(useParams().testNumber)
   const questionNumber = Number(useParams().questionNumber)
@@ -27,6 +29,10 @@ const Question = () => {
   useEffect(() => {
     setCurrentQuestion(questionsData[questionNumber - 1])
   }, [questionNumber])
+
+  const handleOptionSelect = (questionNumber, optionId) => {
+    setSelectedOptions((prev) => ({...prev, [questionNumber]: optionId}))
+  }
 
   const handleBackClick = () => {}
 
@@ -49,15 +55,6 @@ const Question = () => {
       )
     }
   }
-
-  const [selectedOptions, setSelectedOptions] = useState({})
-
-  const handleOptionSelect = (questionNumber, optionId) => {
-    setSelectedOptions((prev) => ({...prev, [questionNumber]: optionId}))
-  }
-  useEffect(() => {
-    console.log("selectedOptions", selectedOptions)
-  }, [selectedOptions])
 
   return (
     <div className={styles["question-container"]}>
@@ -92,6 +89,7 @@ const Question = () => {
           questions={questionsData}
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
+          currentQuestionNumber={questionNumber}
         />
       </div>
     </div>
