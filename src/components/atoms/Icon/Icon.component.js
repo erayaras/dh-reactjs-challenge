@@ -7,7 +7,9 @@ const Icon = ({name, onClick = () => {}}) => {
   try {
     iconSrc = require(`../../../assets/icons/${name}.svg`)
   } catch (e) {
-    console.warn(`Icon "${name}" not found!`)
+    if (process.env.NODE_ENV !== "production") {
+      console.warn(`Icon "${name}" not found!`)
+    }
     return null
   }
 
