@@ -23,10 +23,9 @@ The application is designed as a question bank system that allows users to navig
 ## Implementation Challenges & Solutions
 
 - **Interactive Feedback on Option Selection:**
+
   - **Challenge:** When a user selects an option, the application must provide immediate feedback. If the chosen option is correct, the styling of the other options should change and a specific button should appear. Conversely, if the chosen option is incorrect, the styling of the other options should adjust differently, and another distinct button should emerge.
   - **Solution:** Leveraged conditional rendering and state management to dynamically adjust the UI based on the user's selection. By comparing the user's choice against the correct answer in real-time, the application can modify component styles and display appropriate buttons to provide instantaneous feedback. This approach enhances user engagement and provides a more interactive learning experience.
-
-## Additional Implementation Challenges & Solutions
 
 - **Navigation Button Uniformity:**
 
