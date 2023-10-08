@@ -8,12 +8,12 @@ const SideNavigator = () => {
   const location = useLocation()
 
   const mainNavButtons = [
-    {name: "Homepage", icon: "homepage", route: "/"},
+    {name: "Homepage", icon: "homepage", route: "/home"},
     {name: "Lessons", icon: "lessons", route: "/lessons"},
     {
       name: "Question Bank",
       icon: "question-bank",
-      route: "/question-bank",
+      route: "/question-bank/turkce/konu-tarama/1/1",
     },
     {name: "Practice Exams", icon: "practice-exams", route: "/practice-exams"},
     {

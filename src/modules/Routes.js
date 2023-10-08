@@ -16,25 +16,51 @@ import FeedbackSuggestions from "./QuestionBank/pages/Question.component"
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* <Route path="*" element={<div>Not Found</div>} /> */}
-      <Route path="/" element={<Homepage />} />
-      <Route path="/lessons" element={<Lessons />} />
+      <Route
+        path="/home/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<Homepage />}
+      />
+      <Route
+        path="/lessons/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<Lessons />}
+      />
       <Route
         path="/question-bank/:lessonName/:testName/:testNumber/:questionNumber"
         element={<QuestionBank />}
       />
 
-      <Route path="/practice-exams" element={<PracticeExams />} />
-      <Route path="/guidance-videos" element={<GuidanceVideos />} />
-      <Route path="/statistics" element={<Statistics />} />
       <Route
-        path="/measurement-evaluation"
+        path="/practice-exams/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<PracticeExams />}
+      />
+      <Route
+        path="/guidance-videos/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<GuidanceVideos />}
+      />
+      <Route
+        path="/statistics/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<Statistics />}
+      />
+      <Route
+        path="/measurement-evaluation/:lessonName/:testName/:testNumber/:questionNumber"
         element={<MeasurementEvaluation />}
       />
-      <Route path="/cozucu-app" element={<CozucuApp />} />
-      <Route path="/simdi-anladim-app" element={<SimdiAnladimApp />} />
-      <Route path="/kocum-yanimda-app" element={<KocumYanimdaApp />} />
-      <Route path="/feedback-suggestions" element={<FeedbackSuggestions />} />
+      <Route
+        path="/cozucu-app/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<CozucuApp />}
+      />
+      <Route
+        path="/simdi-anladim-app/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<SimdiAnladimApp />}
+      />
+      <Route
+        path="/kocum-yanimda-app/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<KocumYanimdaApp />}
+      />
+      <Route
+        path="/feedback-suggestions/:lessonName/:testName/:testNumber/:questionNumber"
+        element={<FeedbackSuggestions />}
+      />
     </Routes>
   )
 }
