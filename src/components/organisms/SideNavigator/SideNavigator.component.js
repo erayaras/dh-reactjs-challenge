@@ -2,8 +2,11 @@ import React from "react"
 import BrandLogo from "./atoms/BrandLogo"
 import NavButton from "./atoms/NavButton"
 import styles from "./SideNavigator.module.scss"
+import {useLocation} from "react-router-dom"
 
 const SideNavigator = () => {
+  const location = useLocation()
+
   const mainNavButtons = [
     {name: "Homepage", icon: "homepage", route: "/"},
     {name: "Lessons", icon: "lessons", route: "/lessons"},
@@ -56,19 +59,39 @@ const SideNavigator = () => {
             }
             key={button.name}
           >
-            <NavButton iconName={button.icon} to={button.route} />
+            <NavButton
+              iconName={button.icon}
+              to={button.route}
+              isActive={
+                button.route === "/"
+                  ? location.pathname === "/"
+                  : location.pathname.startsWith(button.route)
+              }
+            />
           </div>
         ))}
       </div>
 
       <div className={styles["app-nav-buttons"]}>
         {appNavButtons.map((button) => (
-          <NavButton iconName={button.icon} to={button.route} />
+          <NavButton
+            iconName={button.icon}
+            to={button.route}
+            isActive={
+              button.route === "/"
+                ? location.pathname === "/"
+                : location.pathname.startsWith(button.route)
+            }
+          />
         ))}
       </div>
 
       <div className={styles["feedback-suggestions-button"]}>
-        <NavButton iconName="feedback-suggestions" to="/feedback-suggestions" />
+        <NavButton
+          iconName="feedback-suggestions"
+          to="/feedback-suggestions"
+          isActive={location.pathname.startsWith("/feedback-suggestions")}
+        />
       </div>
     </div>
   )
