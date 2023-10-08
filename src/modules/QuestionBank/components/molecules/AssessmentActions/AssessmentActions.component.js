@@ -9,7 +9,7 @@ const AssessmentActions = () => {
       <AnswerToggle label="Cevapları Göster" />
       <Button
         label="Testi Bitir"
-        theme="end-test"
+        theme="endTest"
         icon="off"
         iconPosition="left"
       />
