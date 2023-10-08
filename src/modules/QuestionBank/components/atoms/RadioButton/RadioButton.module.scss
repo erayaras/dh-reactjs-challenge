@@ -52,10 +52,6 @@
     color: var(--form-control-correct-color);
   }
 
-  &.incorrect input[type="radio"]::before {
-    box-shadow: inset 16px 16px var(--form-control-incorrect-color);
-  }
-
   &.incorrect input[type="radio"] {
     color: var(--form-control-incorrect-color);
   }
