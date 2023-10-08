@@ -30,7 +30,12 @@ const BubbleRow = ({
 
 BubbleRow.propTypes = {
   questionNumber: PropTypes.number.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   selectedOption: PropTypes.string,
   currentQuestionNumber: PropTypes.number.isRequired,
 }
