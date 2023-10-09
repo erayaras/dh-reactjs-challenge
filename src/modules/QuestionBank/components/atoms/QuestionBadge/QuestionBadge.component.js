@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 const QuestionBadge = ({lessonName, questionNumber}) => {
   return (
     <div className={styles.questionBadge}>
-      <span className={styles.fixedText}>Soru:{lessonName}#</span>
-      <span className={styles.dynamicNumber}>{questionNumber}</span>
+      <span className={styles.fixedText}>Soru:{lessonName}</span>
+      <span className={styles.dynamicNumber}>#{questionNumber}</span>
     </div>
   )
 }
