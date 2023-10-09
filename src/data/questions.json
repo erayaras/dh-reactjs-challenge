@@ -1,4 +1,7 @@
-[
+{
+    "turkce": {
+        "konu-tarama":{
+            "1": [
     {
         "id": 1,
         "description": "“Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.”",
@@ -420,3 +423,6 @@
         "correctAnswerId": "d"
     }
 ]
+}
+}
+}

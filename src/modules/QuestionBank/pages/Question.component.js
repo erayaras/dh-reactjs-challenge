@@ -15,19 +15,41 @@ import styles from "./Question.module.scss"
 
 const Question = () => {
   const navigate = useNavigate()
-
-  const [currentQuestion, setCurrentQuestion] = useState(null)
-  const [selectedOptions, setSelectedOptions] = useState({})
-
-  const {lessonName, testName} = useParams()
-  const testNumber = Number(useParams().testNumber)
-  const questionNumber = Number(useParams().questionNumber)
+  const {
+    lessonName,
+    testName,
+    testNumber: testNum,
+    questionNumber: questionNum,
+  } = useParams()
+  const testNumber = Number(testNum)
+  const questionNumber = Number(questionNum)
   const displayLessonName = getDisplayLessonName(lessonName)
   const displayTestName = getDisplayTestName(testName)
 
+  const [selectedOptions, setSelectedOptions] = useState({})
+  const [currentQuestion, setCurrentQuestion] = useState(null)
+  const [totalQuestions, setTotalQuestions] = useState(0)
+  const [questionsForCurrentTest, setQuestionsForCurrentTest] = useState([])
+
   useEffect(() => {
-    setCurrentQuestion(questionsData[questionNumber - 1])
-  }, [questionNumber])
+    const questionsForLesson = questionsData[lessonName]
+    const questionsForTest = questionsForLesson?.[testName]
+    const questionsForTestNumber = questionsForTest?.[testNumber]
+    const specificQuestion = questionsForTestNumber?.[questionNumber - 1]
+
+    if (!specificQuestion) {
+      navigate("/404")
+      return
+    }
+
+    setCurrentQuestion(specificQuestion)
+    setTotalQuestions(questionsForTestNumber.length)
+    setQuestionsForCurrentTest(questionsForTestNumber)
+  }, [lessonName, testName, testNumber, questionNumber, navigate])
+
+  const navigateToQuestion = (num) => {
+    navigate(`/question-bank/${lessonName}/${testName}/${testNumber}/${num}`)
+  }
 
   const handleOptionSelect = (questionNumber, optionId) => {
     setSelectedOptions((prev) => ({...prev, [questionNumber]: optionId}))
@@ -36,23 +58,12 @@ const Question = () => {
   const handleBackClick = () => {}
 
   const handlePrevClick = () => {
-    if (questionNumber > 1) {
-      navigate(
-        `/question-bank/${lessonName}/${testName}/${testNumber}/${
-          questionNumber - 1
-        }`
-      )
-    }
+    if (questionNumber > 1) navigateToQuestion(questionNumber - 1)
   }
 
   const handleNextClick = () => {
-    if (questionNumber < questionsData.length) {
-      navigate(
-        `/question-bank/${lessonName}/${testName}/${testNumber}/${
-          questionNumber + 1
-        }`
-      )
-    }
+    if (questionNumber < questionsForCurrentTest.length)
+      navigateToQuestion(questionNumber + 1)
   }
 
   return (
@@ -62,7 +73,6 @@ const Question = () => {
           title={`${displayTestName} Testi #${testNumber}`}
           onBackClick={handleBackClick}
         />
-
         {currentQuestion && (
           <QuestionDetail
             lessonName={displayLessonName}
@@ -74,20 +84,18 @@ const Question = () => {
             selectedOption={selectedOptions[questionNumber]}
           />
         )}
-
         <QuestionNavigation
           currentQuestionNumber={questionNumber}
-          totalQuestions={questionsData.length}
+          totalQuestions={totalQuestions}
           onPrevClick={handlePrevClick}
           onNextClick={handleNextClick}
         />
       </div>
-
       <div className={styles.answer}>
         <AssessmentActions />
         <BubbleSheet
           lessonName={displayLessonName}
-          questions={questionsData}
+          questions={questionsForCurrentTest}
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
           currentQuestionNumber={questionNumber}
