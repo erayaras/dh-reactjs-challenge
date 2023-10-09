@@ -73,6 +73,12 @@ Here are some screenshots showcasing the application's main features:
 2. You can navigate between questions using the provided navigation buttons.
 3. Selecting an option on the question will highlight it on the bubble sheet.
 
+## Known Issues
+
+### SVG File Size Issue
+
+The `Olcme Degerlendirme.svg` file is considerably large at 1.1 MB. Attempts to reduce its size using tools like Illustrator, Photoshop, or online utilities were unsuccessful due to the presence of a sizable base64 image embedded within it. This issue may contribute to slightly slower site load times. Reducing the size of this SVG file was beyond the scope of design capabilities for this project.
+
 ## Technical Highlights
 
 - **Dynamic Routing:** Utilized `react-router-dom` to handle dynamic routing based on the selected question.
