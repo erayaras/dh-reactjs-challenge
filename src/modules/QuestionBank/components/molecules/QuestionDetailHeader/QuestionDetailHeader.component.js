@@ -4,17 +4,18 @@ import QuestionBadge from "../../atoms/QuestionBadge"
 import styles from "./QuestionDetailHeader.module.scss"
 import QuestionDetailToolBar from "../../molecules/QuestionDetailToolBar/QuestionDetailToolBar.component"
 
-const QuestionDetailHeader = ({badgeLabel}) => {
+const QuestionDetailHeader = ({lessonName, questionNumber}) => {
   return (
     <div className={styles.questionDetailHeader}>
-      <QuestionBadge label={badgeLabel} />
+      <QuestionBadge lessonName={lessonName} questionNumber={questionNumber} />
       <QuestionDetailToolBar />
     </div>
   )
 }
 
 QuestionDetailHeader.propTypes = {
-  badgeLabel: PropTypes.string.isRequired,
+  lessonName: PropTypes.string.isRequired,
+  questionNumber: PropTypes.number.isRequired,
 }
 
 export default QuestionDetailHeader

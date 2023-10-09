@@ -15,7 +15,8 @@ const QuestionDetail = ({
     <div className={styles.questionDetailContainer}>
       <div className={styles.headerAndQuestion}>
         <QuestionDetailHeader
-          badgeLabel={`Soru: ${lessonName} #${questionNumber}`}
+          lessonName={lessonName}
+          questionNumber={questionNumber}
         />
 
         <p className={styles.description}>{question?.description}</p>

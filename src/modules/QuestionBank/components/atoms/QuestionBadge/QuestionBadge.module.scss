@@ -1,19 +1,31 @@
 .questionBadge {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 111px;
+  justify-content: flex-start;
+  min-width: 121px;
   height: 28px;
   flex-shrink: 0;
   border-radius: 5px;
   background: #2c3e50;
+  padding: 0 10px;
+}
 
-  & > span {
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
+.fixedText,
+.dynamicNumber {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.fixedText {
+  width: auto;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.dynamicNumber {
+  text-align: left;
+  flex-grow: 1;
 }
