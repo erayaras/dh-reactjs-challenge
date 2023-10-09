@@ -13,6 +13,8 @@ import SimdiAnladimApp from "./QuestionBank/pages/Question.component"
 import KocumYanimdaApp from "./QuestionBank/pages/Question.component"
 import FeedbackSuggestions from "./QuestionBank/pages/Question.component"
 
+import Page404 from "../components/organisms/Page404/Page404.component"
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -67,6 +69,8 @@ const AppRoutes = () => {
         path="/feedback-suggestions/:lessonName/:testName/:testNumber/:questionNumber"
         element={<FeedbackSuggestions />}
       />
+
+      <Route path="*" element={<Page404 />} />
     </Routes>
   )
 }

@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .title {
+      font-size: 64px;
+      font-weight: 600;
+      color: #363636;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 500;
+      color: #363636;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper .main .title {
+    font-size: 48px;
+  }
+
+  .wrapper .main .subtitle {
+    font-size: 20px;
+  }
+}
