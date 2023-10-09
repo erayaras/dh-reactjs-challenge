@@ -42,6 +42,7 @@ const SideNavigator = () => {
       route: "/kocum-yanimda-app",
     },
   ]
+  // console.log("Pathname:", location.pathname)
 
   return (
     <div className={styles.sideNavigator}>
@@ -50,41 +51,45 @@ const SideNavigator = () => {
       </div>
 
       <div className={styles.mainNavButtons}>
-        {mainNavButtons.map((button) => (
-          <div
-            className={
-              button.icon === "measurement-evaluation"
-                ? styles.iconWithBorder
-                : ""
-            }
-            key={button.name}
-          >
+        {mainNavButtons.map((button) => {
+          return (
+            <div
+              className={
+                button.icon === "measurement-evaluation"
+                  ? styles.iconWithBorder
+                  : ""
+              }
+              key={button.name}
+            >
+              <NavButton
+                iconName={button.icon}
+                to={button.route}
+                isActive={
+                  button.route === "/"
+                    ? location.pathname === "/"
+                    : location.pathname.startsWith(button.route.slice(0, 6))
+                }
+              />
+            </div>
+          )
+        })}
+      </div>
+
+      <div className={styles.appNavButtons}>
+        {appNavButtons.map((button) => {
+          return (
             <NavButton
+              key={button.name}
               iconName={button.icon}
               to={button.route}
               isActive={
                 button.route === "/"
                   ? location.pathname === "/"
-                  : location.pathname.startsWith(button.route)
+                  : location.pathname.startsWith(button.route.slice(0, 6))
               }
             />
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.appNavButtons}>
-        {appNavButtons.map((button) => (
-          <NavButton
-            key={button.name}
-            iconName={button.icon}
-            to={button.route}
-            isActive={
-              button.route === "/"
-                ? location.pathname === "/"
-                : location.pathname.startsWith(button.route)
-            }
-          />
-        ))}
+          )
+        })}
       </div>
 
       <div className={styles.feedbackSuggestionsButton}>
