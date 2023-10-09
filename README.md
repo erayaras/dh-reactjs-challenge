@@ -79,6 +79,7 @@ Here are some screenshots showcasing the application's main features:
 - **State Management:** Local state management was handled using React hooks, primarily `useState` and `useEffect`.
 - **Performance Optimization:** Used React's `forwardRef` and `useRef` to handle automatic scrolling, ensuring a seamless user experience.
 - **Error Boundaries:** Implemented error boundaries within the application to gracefully handle potential runtime errors. This ensures that if a component encounters an error, it won't crash the entire application. Instead, it provides the opportunity to display a friendly error message to users and log the error for further diagnosis.
+- **404 Page Handling:** Introduced a custom 404 page to improve user experience. When users navigate to an undefined route, they are presented with this custom page.
 
 ## Testing Approach
 
