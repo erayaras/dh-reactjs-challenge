@@ -43,18 +43,17 @@ The application is designed as a question bank system that allows users to navig
 
 ## Demo & Screenshots
 
-**Live Demo:** [Click here to view the live demo.](https://dh-reactjs-challenge.ew.r.appspot.com)  
-**Video Walkthrough:** [Watch the application in action here.](#)
+**Live Demo:** [Click here to view the live demo.](https://dh-reactjs-challenge.ew.r.appspot.com)
 
 ### Screenshots
 
 Here are some screenshots showcasing the application's main features:
 
-![Screenshot 1 Description](path_to_screenshot1.png)  
-_Description or caption for Screenshot 1_
+![Screenshot 1 Description](https://github.com/erayaras/dh-reactjs-challenge/raw/main/question.png)  
+_question_
 
-![Screenshot 2 Description](path_to_screenshot2.png)  
-_Description or caption for Screenshot 2_
+![Screenshot 2 Description](https://github.com/erayaras/dh-reactjs-challenge/raw/main/wrong-answer.png)  
+_wrong-answer_
 
 ## Installation & Setup
 
