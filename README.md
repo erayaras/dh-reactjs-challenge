@@ -38,8 +38,13 @@ The application is designed as a question bank system that allows users to navig
   - **Solution:** Adobe Illustrator was employed to optimize these SVG icons by adjusting and removing the unwanted padding around them, ensuring their proper alignment.
 
 - **Opacity and Background Color Rendering:**
+
   - **Challenge:** Figma designs incorporated separate values for opacity and background color for certain sections. When implemented in CSS, using both opacity and background color caused some elements to appear faint or even disappear due to the combined effects of opacity.
   - **Solution:** Instead of using separate opacity and hex color values, the colors were converted to RGB and combined with the opacity, resulting in RGBA values. This method ensured a consistent visual representation of the color as intended in the Figma design while preventing any unintentional fading or disappearance of elements.
+
+- **Bottom Navigation Button Centering:**
+  - **Challenge:** The left and right arrow icons in the bottom navigation were not vertically centered within their respective artboards in the Figma design. Adjustments in Adobe Illustrator did not yield the desired centered alignment.
+  - **Solution:** The vertical centering was achieved using CSS in the implementation. By adjusting positioning properties in the stylesheet, the icons were perfectly centered, ensuring they matched the intended design aesthetic.
 
 ## Demo & Screenshots
 
