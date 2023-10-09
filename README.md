@@ -107,4 +107,4 @@ This project was an exciting opportunity to apply and showcase various frontend 
 - These alerts can be misleading for new developers and can also create unnecessary alarm for more experienced ones.
 - Before taking action on `npm audit` results, it's recommended to interpret them discerningly, bearing in mind that not every reported issue may be pertinent to every project.
 
-For a detailed discussion on the challenges and limitations of `npm audit`, you can read [npm audit: Broken by Design](https://overreacted.io/npm-audit-broken-by-design/).
+For a detailed discussion on the challenges and limitations of `npm audit`, please read [npm audit: Broken by Design](https://overreacted.io/npm-audit-broken-by-design/) by Dan Abramov.
