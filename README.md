@@ -77,7 +77,7 @@ Here are some screenshots showcasing the application's main features:
 
 ### SVG File Size Issue
 
-The `Olcme Degerlendirme.svg` file is considerably large at 1.1 MB. Attempts to reduce its size using tools like Illustrator, Photoshop, or online utilities were unsuccessful due to the presence of a sizable base64 image embedded within it. This issue may contribute to slightly slower site load times. Reducing the size of this SVG file was beyond the scope of design capabilities for this project.
+The `measurement-evaluation.svg` file is considerably large at 1.1 MB, when exported from Figma. Attempts to reduce its size using tools like Illustrator, Photoshop, or online utilities were unsuccessful due to the presence of a sizable base64 image embedded within it. This issue may contribute to slightly slower site load times. Reducing the size of this SVG file was beyond the scope of design capabilities for this project.
 
 ## Technical Highlights
 
