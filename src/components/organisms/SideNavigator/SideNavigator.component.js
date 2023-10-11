@@ -42,7 +42,6 @@ const SideNavigator = () => {
       route: "/kocum-yanimda-app",
     },
   ]
-  // console.log("Pathname:", location.pathname)
 
   return (
     <div className={styles.sideNavigator}>
